@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>repl.it</title>
+	<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	<div id="app">
+		<div id="playground">
+      <span v-if="!gameOver">
+  			Player {{turn}}'s turn
+      </span>
+			<table>
+				<tr v-for="(row, rowIndex) in rooms">
+					<td v-for="(col,colIndex) in row" :class="[col == 1? 'red' : col == 2 ? 'green' : '']" @click="select(rowIndex,colIndex)">
+
+					</td>
+				</tr>
+			</table>
+			<span v-if="winner">
+      Winner: Player {{winner}}
+    </span>
+    <span v-if="gameOver && winner == null">
+      No More Moves Left
+    </span>
+    <button v-if="gameOver" @click="restart">
+      Play again
+    </button>
+  </div>
+  <div id="history">
+    <ul>
+      <li v-for="move in playerMoves">
+        Player {{move.player}} chose Row: {{move.row}} Col: {{move.col}}
+      </li>
+    </ul>
+  </div>
+</div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js"></script>
+<script src="script.js"></script>
+  </body>
+</html>

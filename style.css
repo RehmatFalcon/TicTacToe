@@ -1,0 +1,46 @@
+body {
+  background: #20262E;
+  padding: 20px;
+  font-family: Helvetica;
+}
+
+#app {
+  background: #fff;
+  border-radius: 4px;
+  padding: 20px;
+  transition: all 0.2s;
+}
+
+li {
+  margin: 8px 0;
+}
+
+h2 {
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+del {
+  color: rgba(0, 0, 0, 0.3);
+}
+.red {
+  background: red;
+}
+td {
+  height: 30px;
+  width: 30px;
+  border: 2px solid blue;
+}
+.green {
+  background: green;
+}
+#app {
+  display: flex;
+}
+#playground {
+  flex: 1 auto;
+}
+button {
+  padding: 10px;
+  background: rgba(200, 100, 23, .8);
+}
